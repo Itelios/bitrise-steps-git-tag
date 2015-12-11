@@ -18,17 +18,17 @@ inputs:
     opts:
       title: "Tag to set on current commit"
       summary: You can set a custom tag or keep default value to tag with current build number
-      is_expand: false
+      is_expand: true
       is_required: true
   - tag_message: 
     opts:
       title: "The message associated to the tag in case you want an annoted tag"
-      is_expand: false
+      is_expand: true
       is_required: false 
   - push: true
     opts:
       title: "Determine if your want to push the tag to your remote repository or not"
-      is_expand: false
+      is_expand: true
       is_required: true
       is_dont_change_value: true
       value_options: ["true", "false"]
