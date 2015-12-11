@@ -1,6 +1,25 @@
 #!/bin/bash
 
-echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
+if [ -n "${push}" -a "${push}" == "true" -o "${push}" == "false" ]
+then
+    git tag -a ${tag} -m '${tag_message}'
+    if [ "${push}" == "true" ]; then
+        git push --follow-tags
+    fi
+    if (( $? )); then
+        echo "Failure" >&2
+        exit 1
+    else
+        echo "Success, new tags are :"
+        echo "$(git tag)"
+        # code block that is dependent on success of previous command
+    fi
+    exit 0
+else
+    echo "push variable is required and could only be set to true or false"
+    exit 1
+fi
+
 
 #
 # --- Export Environment Variables for other Steps:

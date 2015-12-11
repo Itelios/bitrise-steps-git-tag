@@ -1,56 +1,40 @@
-title: "STEP TEMPLATE"
-summary: A short summary of the step. Don't make it too long ;)
+title: "Git tag"
+summary: A simple step that create a tag to the current commit
 description: |-
-  This is a Step template.
-  Contains everything what's required for a valid Stepman managed step.
+  
+  I've no description more precise of this step at this time
 
-  A Step's description (and generally any `description` property)
-  can be a [Markdown](https://en.wikipedia.org/wiki/Markdown) formatted text.
-
-  To create your own Step:
-
-  1. Create a new repository on GitHub
-  2. Copy the files from this folder into your repository
-  3. That's all, you can use it on your own machine
-  4. Once you're happy with it you can share it with others.
-website: https://github.com/...
-source_code_url: https://github.com/...
-support_url: https://github.com/.../issues
+website: https://github.com/Itelios/bitrise-steps-git-tag
+source_code_url: https://github.com/Itelios/bitrise-steps-git-tag
+support_url: https://github.com/Itelios/bitrise-steps-git-tag/issues
 host_os_tags:
   - osx-10.10
-project_type_tags:
-  - ios
 type_tags:
-  - script
-is_requires_admin_user: true
+  - git
+  - vcs
+is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
-dependencies:
-  - manager: brew
-    name: git
-run_if: ""
+dependencies: []
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - tag: $BITRISE_BUILD_NUMBER
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this input.
-
-        Can be Markdown formatted text.
+      title: "Tag to set on current commit"
+      summary: You can set a custom tag or keep default value to tag with current build number
       is_expand: false
       is_required: true
       is_dont_change_value: true
       value_options: []
-outputs:
-  - EXAMPLE_STEP_OUTPUT:
+  - tag_message: 
     opts:
-      title: "Example Step Output"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this output.
-
-        Can be Markdown formatted text.
+      title: "The message associated to the tag in case you want an annoted tag"
+      is_expand: false
+      is_required: false
+      is_dont_change_value: true
+      value_options: []
+  - push: true
+    opts:
       is_expand: false
       is_required: true
-      is_dont_change_value: true
+      value_options: ["true", "false"]
+      

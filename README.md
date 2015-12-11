@@ -1,19 +1,29 @@
-# My Awesome Step
+# Git Tag Step
 
-My Awesome Step is a solid starting code base for
-a new Step.
+This step simply put a git tag on the current commit.
 
 
 ## How to use this Step
 
-Can be run directly with the [bitrise CLI](https://github.com/bitrise-io/bitrise),
-just `git clone` this repository, `cd` into it's folder in your Terminal/Command Line
-and call `bitrise run test`.
+This step take three inputs : 
 
-*Check the `bitrise.yml` file for required inputs which have to be
-added to your `.bitrise.secrets.yml` file!*
+- `tag` (default value: $`BITRISE_BUILD_NUMBER`)
+
+The tag you want to set on the current commit 
+
+- `tag_message`
+
+The message to associate to this tag. The tag create on the commit is an annoted tags. 
+If no message was given (blank string) that always create annoted tags with empty annotation
+
+- `push` (default value: `true`)
+
+You can define to `false` or `true` if you want or not to push the tags you come to set.
 
 
-## Share your own Step
+# Credits
 
-You can share your Step or step version with the [bitrise CLI](https://github.com/bitrise-io/bitrise). Just run `bitrise share` and follow the guide it prints.
+[ITELIOS](http://www.itelios.com)
+
+* Main Developer: [Vincent Saluzzo](vincent.saluzzo@itelios.com)
+
