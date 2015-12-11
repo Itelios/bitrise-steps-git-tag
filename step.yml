@@ -1,9 +1,6 @@
 title: "Git tag"
 summary: A simple step that create a tag to the current commit
-description: |-
-  
-  I've no description more precise of this step at this time
-
+description: A simple step that create a tag to the current commit
 website: https://github.com/Itelios/bitrise-steps-git-tag
 source_code_url: https://github.com/Itelios/bitrise-steps-git-tag
 support_url: https://github.com/Itelios/bitrise-steps-git-tag/issues
