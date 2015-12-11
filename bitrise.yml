@@ -47,7 +47,7 @@ workflows:
       - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/itelios/bitrise-steplib.git
       - STEP_ID_IN_STEPLIB: git-tag
       - STEP_GIT_VERION_TAG_TO_SHARE: 1.0.0
-      - STEP_GIT_CLONE_URL: https://github.com/Itelios/bitrise-steps-git-tag
+      - STEP_GIT_CLONE_URL: https://github.com/Itelios/bitrise-steps-git-tag.git
     description: |-
       If this is the first time you try to share a Step you should
       first call: $ bitrise share
