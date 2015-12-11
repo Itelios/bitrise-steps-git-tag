@@ -34,7 +34,7 @@ inputs:
       value_options: []
   - push: true
     opts:
-      title: "Determine if your want to push the tag to your remote repository or not)
+      title: "Determine if your want to push the tag to your remote repository or not"
       is_expand: false
       is_required: true
       value_options: ["true", "false"]
