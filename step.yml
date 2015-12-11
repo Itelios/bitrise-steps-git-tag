@@ -25,7 +25,7 @@ inputs:
       title: "The message associated to the tag in case you want an annoted tag"
       is_expand: true
       is_required: false 
-  - push: true
+  - push: "true"
     opts:
       title: "Determine if your want to push the tag to your remote repository or not"
       is_expand: true
