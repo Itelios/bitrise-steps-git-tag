@@ -2,7 +2,7 @@
 
 if [ -n "${push}" -a "${push}" == "true" -o "${push}" == "false" ]
 then
-    git tag -a ${tag} -m '${tag_message}'
+    git tag -a ${tag} -m "${tag_message}"
     if [ "${push}" == "true" ]; then
         git push --follow-tags
     fi
